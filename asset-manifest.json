@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/tajohnson16/MoneyManager/static/css/main.aa2b2c05.chunk.css",
+    "main.js": "/tajohnson16/MoneyManager/static/js/main.4a12b03c.chunk.js",
+    "main.js.map": "/tajohnson16/MoneyManager/static/js/main.4a12b03c.chunk.js.map",
+    "runtime-main.js": "/tajohnson16/MoneyManager/static/js/runtime-main.8a503973.js",
+    "runtime-main.js.map": "/tajohnson16/MoneyManager/static/js/runtime-main.8a503973.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/tajohnson16/MoneyManager/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.23fe1e1e.chunk.js": "/tajohnson16/MoneyManager/static/js/2.23fe1e1e.chunk.js",
+    "static/js/2.23fe1e1e.chunk.js.map": "/tajohnson16/MoneyManager/static/js/2.23fe1e1e.chunk.js.map",
+    "index.html": "/tajohnson16/MoneyManager/index.html",
+    "precache-manifest.1a994af6f1ae961489e2b7408ca3ed02.js": "/tajohnson16/MoneyManager/precache-manifest.1a994af6f1ae961489e2b7408ca3ed02.js",
+    "service-worker.js": "/tajohnson16/MoneyManager/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/tajohnson16/MoneyManager/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.aa2b2c05.chunk.css.map": "/tajohnson16/MoneyManager/static/css/main.aa2b2c05.chunk.css.map",
+    "static/js/2.23fe1e1e.chunk.js.LICENSE.txt": "/tajohnson16/MoneyManager/static/js/2.23fe1e1e.chunk.js.LICENSE.txt",
+    "static/media/assessment.png": "/tajohnson16/MoneyManager/static/media/assessment.d93d3bd4.png",
+    "static/media/results.png": "/tajohnson16/MoneyManager/static/media/results.8c8083c9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a503973.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.23fe1e1e.chunk.js",
+    "static/css/main.aa2b2c05.chunk.css",
+    "static/js/main.4a12b03c.chunk.js"
+  ]
+}
