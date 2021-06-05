@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "363a2e305e639eff44f9efb0543df2fd",
+    "revision": "f4a3c75f83135510351d0eacde991e70",
     "url": "/tajohnson16/MoneyManager/index.html"
   },
   {
-    "revision": "b7b10252edb60400ed1e",
+    "revision": "03344e6a195a220d6b40",
     "url": "/tajohnson16/MoneyManager/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "9964577755e9b994a630",
+    "revision": "e16c8947fa1724198c18",
     "url": "/tajohnson16/MoneyManager/static/css/main.aa2b2c05.chunk.css"
   },
   {
-    "revision": "b7b10252edb60400ed1e",
-    "url": "/tajohnson16/MoneyManager/static/js/2.23fe1e1e.chunk.js"
+    "revision": "03344e6a195a220d6b40",
+    "url": "/tajohnson16/MoneyManager/static/js/2.5ff9fb5f.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/tajohnson16/MoneyManager/static/js/2.23fe1e1e.chunk.js.LICENSE.txt"
+    "url": "/tajohnson16/MoneyManager/static/js/2.5ff9fb5f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9964577755e9b994a630",
-    "url": "/tajohnson16/MoneyManager/static/js/main.4a12b03c.chunk.js"
+    "revision": "e16c8947fa1724198c18",
+    "url": "/tajohnson16/MoneyManager/static/js/main.d767e37e.chunk.js"
   },
   {
     "revision": "2477cfc145eb0771243e",
