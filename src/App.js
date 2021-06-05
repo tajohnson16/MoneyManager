@@ -45,13 +45,13 @@ class App extends React.Component {
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className='ml-auto'>
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/MoneyManager/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
-          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
+          <Route path="/MoneyManager/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
           <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} />} />
           <Route path="/results" exact render={() => <ResultsPage />} />
           <Route path="/assessment" exact render={() => <AssessmentPage />} />
