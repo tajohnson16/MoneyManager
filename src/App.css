@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+#homeNav.nav-link.active {
+  background-color: white !important;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link.active {
+  background-color: rgb(155, 155, 155) !important;
+}

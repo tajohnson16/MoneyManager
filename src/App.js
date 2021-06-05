@@ -41,12 +41,16 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar sticky="top" className="border-bottom" bg="white" expand="lg">
-            <Navbar.Brand>Manage Your Money</Navbar.Brand>
+            <Navbar.Brand><Nav.Link style={{ color: "#212529", textDecoration: 'none' }} href="/MoneyManager/">Manage Your Money</Nav.Link></Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
-              <Nav className='ml-auto'>
-                <Link className="nav-link" to="/MoneyManager/">Home</Link>
-                <Link className="nav-link" to="/MoneyManager/about">About</Link>
+              <Nav defaultActiveKey="/MoneyManager/" variant="pills" className='ml-auto'>
+                <Nav.Item >
+                  <Nav.Link id="homeNav" href="/MoneyManager/">Home</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link as={Link} eventKey="about" to="/MoneyManager/about">About</Nav.Link>
+                </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
