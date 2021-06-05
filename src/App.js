@@ -46,21 +46,21 @@ class App extends React.Component {
             <Navbar.Collapse id="navbar-toggle">
               <Nav className='ml-auto'>
                 <Link className="nav-link" to="/MoneyManager/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/MoneyManager/about">About</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
           <Route path="/MoneyManager/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
-          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} />} />
-          <Route path="/results" exact render={() => <ResultsPage />} />
-          <Route path="/assessment" exact render={() => <AssessmentPage />} />
-          <Route path="/salary" exact render={() => <Salary />} />
-          <Route path="/house" exact render={() => <HousePercent />} />
-          <Route path="/car" exact render={() => <CarPercent />} />
-          <Route path="/spend" exact render={() => <SpendingMoney />} />
-          <Route path="/name" exact render={() => <Name />} />
-          <Route path="/profession" exact render={() => <Profession />} />
+          <Route path="/MoneyManager/about" exact render={() => <AboutPage title={this.state.about.title} />} />
+          <Route path="/MoneyManager/results" exact render={() => <ResultsPage />} />
+          <Route path="/MoneyManager/assessment" exact render={() => <AssessmentPage />} />
+          <Route path="/MoneyManager/salary" exact render={() => <Salary />} />
+          <Route path="/MoneyManager/house" exact render={() => <HousePercent />} />
+          <Route path="/MoneyManager/car" exact render={() => <CarPercent />} />
+          <Route path="/MoneyManager/spend" exact render={() => <SpendingMoney />} />
+          <Route path="/MoneyManager/name" exact render={() => <Name />} />
+          <Route path="/MoneyManager/profession" exact render={() => <Profession />} />
 
 
 

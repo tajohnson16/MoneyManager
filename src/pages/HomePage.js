@@ -29,8 +29,8 @@ function HomePage(props) {
         <div>
             <Jumbo title={props.title} subTitle={props.subTitle} />
             <Row className="justify-content-around py-0" style={inlineStyle}>
-                <Link className='hvr-grow-shadow' to='/assessment' style={{ textDecoration: 'none', color: 'black' }}><Card asset={assessment} title={card1.title} text={card1.text} /></Link>
-                <Link className='hvr-grow-shadow' to='/results' style={{ textDecoration: 'none', color: 'black' }}><Card asset={results} title={card2.title} text={card2.text} /></Link>
+                <Link className='hvr-grow-shadow' to='/MoneyManager/assessment' style={{ textDecoration: 'none', color: 'black' }}><Card asset={assessment} title={card1.title} text={card1.text} /></Link>
+                <Link className='hvr-grow-shadow' to='/MoneyManager/results' style={{ textDecoration: 'none', color: 'black' }}><Card asset={results} title={card2.title} text={card2.text} /></Link>
             </Row>
         </div>
     )
