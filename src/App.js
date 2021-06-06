@@ -40,7 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container className="p-0" fluid={true}>
+        <Container className="container" style={{ maxWidth: "1320px" }} fluid={true}>
           <Navbar sticky="top" className="border-bottom" bg="white" expand="lg">
             <Navbar.Brand><Nav.Link style={{ color: "#212529", textDecoration: 'none' }} href="/MoneyManager/">Real Money <img src={money} height="25px"></img></Nav.Link></Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
