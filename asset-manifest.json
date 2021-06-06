@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MoneyManager/static/css/main.7158022b.chunk.css",
-    "main.js": "/MoneyManager/static/js/main.16f82765.chunk.js",
-    "main.js.map": "/MoneyManager/static/js/main.16f82765.chunk.js.map",
+    "main.js": "/MoneyManager/static/js/main.f74e1049.chunk.js",
+    "main.js.map": "/MoneyManager/static/js/main.f74e1049.chunk.js.map",
     "runtime-main.js": "/MoneyManager/static/js/runtime-main.1e2417aa.js",
     "runtime-main.js.map": "/MoneyManager/static/js/runtime-main.1e2417aa.js.map",
     "static/css/2.829c9cb5.chunk.css": "/MoneyManager/static/css/2.829c9cb5.chunk.css",
     "static/js/2.19f3f09f.chunk.js": "/MoneyManager/static/js/2.19f3f09f.chunk.js",
     "static/js/2.19f3f09f.chunk.js.map": "/MoneyManager/static/js/2.19f3f09f.chunk.js.map",
     "index.html": "/MoneyManager/index.html",
-    "precache-manifest.0b76f8954ac06961c0542b1dab50c194.js": "/MoneyManager/precache-manifest.0b76f8954ac06961c0542b1dab50c194.js",
+    "precache-manifest.2e24057c967e6293b27376418bfcb902.js": "/MoneyManager/precache-manifest.2e24057c967e6293b27376418bfcb902.js",
     "service-worker.js": "/MoneyManager/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/MoneyManager/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.7158022b.chunk.css.map": "/MoneyManager/static/css/main.7158022b.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.19f3f09f.chunk.js",
     "static/css/main.7158022b.chunk.css",
-    "static/js/main.16f82765.chunk.js"
+    "static/js/main.f74e1049.chunk.js"
   ]
 }
