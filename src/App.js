@@ -16,22 +16,23 @@ import CarPercent from './FinancialQuestions/CarPercent';
 import SpendingMoney from './FinancialQuestions/SpendingMoney';
 import Name from './FinancialQuestions/Name';
 import Profession from './FinancialQuestions/Profession';
+import money from './assets/money.png';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Manage Your Money',
+      title: 'Real Money',
       headerLinks: [
         { title: 'Home', path: '/' },
         { title: 'About', path: '/about' }
       ],
       home: {
-        title: 'Managing Money',
-        subTitle: 'A financial planning model for new grads'
+        title: 'Real Money',
+        subTitle: 'Financial Planning for New Grads'
       },
       about: {
-        title: 'About This'
+        title: 'About Real Money'
       }
     }
   }
@@ -41,7 +42,7 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar sticky="top" className="border-bottom" bg="white" expand="lg">
-            <Navbar.Brand><Nav.Link style={{ color: "#212529", textDecoration: 'none' }} href="/MoneyManager/">Manage Your Money</Nav.Link></Navbar.Brand>
+            <Navbar.Brand><Nav.Link style={{ color: "#212529", textDecoration: 'none' }} href="/MoneyManager/">Real Money <img src={money} height="25px"></img></Nav.Link></Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav defaultActiveKey="/MoneyManager/" variant="pills" className='ml-auto'>

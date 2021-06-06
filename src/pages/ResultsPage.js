@@ -94,17 +94,17 @@ const ResultsPage = props => {
                     </div>
                 </Tab>
 
-                {/* Yearly Spending Tab */}
-                <Tab eventKey="yearly" title="Yearly Spending">
-                    <div id={'Yearly'}>
-                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Yearly Spending -</h1>
+                {/* Housing Tab */}
+                <Tab eventKey="housing" title="Housing">
+                    <div id={'Housing'}>
+                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Housing Section Coming Soon -</h1>
                     </div>
                 </Tab>
 
                 {/* Other Tab */}
-                <Tab eventKey="other" title="Other">
-                    <div id={'Other'}>
-                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Some Other Info Here -</h1>
+                <Tab eventKey="car" title="Car">
+                    <div id={'Car'}>
+                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Car Section Coming Soon -</h1>
                     </div>
                 </Tab>
             </Tabs>
