@@ -2,7 +2,7 @@ import React from 'react';
 import Jumbo from '../components/Jumbo';
 import aboutPagePic from '../assets/AboutPagePic.jpg'
 
-function AboutPage(props) {
+const AboutPage = props => {
     return (
         <div>
             <Jumbo title={props.title} />

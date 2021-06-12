@@ -19,7 +19,7 @@ import Profession from './FinancialQuestions/Profession';
 import money from './assets/money.png';
 import useSessionStorage from './components/SessionHook';
 
-const App = props => {
+const App = () => {
   const [spendPercent] = useSessionStorage('spendPercent');
   const pageAssets = {
     title: 'Real Money',
@@ -34,6 +34,14 @@ const App = props => {
     about: {
       title: 'About Real Money'
     }
+  }
+
+  var disableButton = true;
+  console.log("Storage length: " + sessionStorage.length);
+  if (spendPercent.length == 0 || sessionStorage.length == 0) {
+    disableButton = true;
+  } else {
+    disableButton = false;
   }
 
   return (
@@ -54,7 +62,7 @@ const App = props => {
           </Navbar.Collapse>
         </Navbar>
 
-        <Route path="/MoneyManager/" exact render={() => <HomePage title={pageAssets.home.title} subTitle={pageAssets.home.subTitle} />} />
+        <Route path="/MoneyManager/" exact render={() => <HomePage title={pageAssets.home.title} subTitle={pageAssets.home.subTitle} disableButton={disableButton} />} />
         <Route path="/MoneyManager/about" exact render={() => <AboutPage title={pageAssets.about.title} />} />
         <Route path="/MoneyManager/results" exact render={() => <ResultsPage />} />
         <Route path="/MoneyManager/assessment" exact render={() => <AssessmentPage />} />

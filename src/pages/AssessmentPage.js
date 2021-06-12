@@ -1,7 +1,7 @@
 import React from 'react';
 import MaritalStatus from '../FinancialQuestions/MaritalStatus';
 
-const AssessmentPage = props => {
+const AssessmentPage = () => {
 
     return (
         <MaritalStatus></MaritalStatus>

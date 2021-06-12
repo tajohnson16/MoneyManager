@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-function InfoCard(props) {
+const InfoCard = props => {
     return (
         <Card border={'secondary'} bg={'light'} style={{ width: '18rem', marginBottom: "20px" }}>
             <Card.Img variant="top" src={props.asset} />

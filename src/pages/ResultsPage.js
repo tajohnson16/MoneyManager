@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Button from 'react-bootstrap/Button';
+import { useHistory } from 'react-router-dom';
 import PersonalCard from '../components/PersonalCard';
 import MonthlySalaryCard from '../components/MonthlySalaryCard';
 import Row from 'react-bootstrap/Row';
@@ -11,7 +13,7 @@ import SavingsCard from '../components/SavingsCard';
 import { Tabs, Tab } from 'react-bootstrap';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const ResultsPage = props => {
+const ResultsPage = () => {
     const [salary] = useSessionStorage('salary')
     const [status] = useSessionStorage('status')
     const [netSalary] = useSessionStorage('netSalary')
@@ -64,6 +66,12 @@ const ResultsPage = props => {
         'marginRight': 0
     };
 
+    const startOver = () => {
+        sessionStorage.clear();
+        window.location.href = "/MoneyManager/";
+
+    }
+
     return (
         <div>
 
@@ -85,8 +93,8 @@ const ResultsPage = props => {
                     <div id={'Monthly'}>
                         <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Monthly Spending -</h1>
                         <Row className="justify-content-around py-0" style={inlineStyle}>
-                            <MonthlySalaryCard></MonthlySalaryCard>
-                            <SavingsCard></SavingsCard>
+                            <MonthlySalaryCard netSalary={netSalary}></MonthlySalaryCard>
+                            <SavingsCard saving={saving} netSalary={netSalary}></SavingsCard>
                             <Card border={'secondary'} bg={'light'} style={{ width: '50rem', marginBottom: "20px" }}>
                                 <CanvasJSChart options={options}></CanvasJSChart>
                             </Card>
@@ -108,6 +116,9 @@ const ResultsPage = props => {
                     </div>
                 </Tab>
             </Tabs>
+
+
+            <Button variant="danger" onClick={startOver}>Start Over</Button>
 
         </div>
     );

@@ -24,13 +24,26 @@ const inlineStyle = {
     'marginRight': 0
 };
 
-function HomePage(props) {
+const HomePage = props => {
+    var buttonClass = "";
+    if (props.disableButton) {
+        buttonClass = 'results disableButton'
+    } else {
+        buttonClass = 'results hvr-grow-shadow'
+    }
+
+    const disableClick = (event) => {
+        if (props.disableButton) {
+            event.preventDefault();
+        }
+    }
+
     return (
         <div>
             <Jumbo title={props.title} subTitle={props.subTitle} />
             <Row className="justify-content-around py-0" style={inlineStyle}>
                 <Link className='hvr-grow-shadow' to='/MoneyManager/assessment' style={{ textDecoration: 'none', color: 'black' }}><Card asset={assessment} title={card1.title} text={card1.text} /></Link>
-                <Link className='hvr-grow-shadow' to='/MoneyManager/results' style={{ textDecoration: 'none', color: 'black' }}><Card asset={results} title={card2.title} text={card2.text} /></Link>
+                <Link onClick={(event) => disableClick(event)} className={buttonClass} to='/MoneyManager/results' style={{ textDecoration: 'none', color: 'black' }}><Card asset={results} title={card2.title} text={card2.text} /></Link>
             </Row>
         </div>
     )

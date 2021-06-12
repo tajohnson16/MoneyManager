@@ -3,7 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function Jumbo(props) {
+const Jumbo = props => {
     return (
         <Jumbotron>
             <Row className="justify-content-center text-center py-2">
