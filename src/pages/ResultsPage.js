@@ -76,7 +76,7 @@ const ResultsPage = () => {
         <div>
 
             <Jumbotron>
-                <h1 className="display-3 font-weight-bolder">{name}</h1>
+                <h1 className="display-3">{name}</h1>
                 <h2><small className="text-muted">{profession}</small></h2>
                 <Row className="justify-content-around py-0" style={inlineStyle}>
                     <PersonalCard text="Marital Status" value={status}></PersonalCard>
@@ -91,7 +91,8 @@ const ResultsPage = () => {
                 {/* Monthly Spending Tab */}
                 <Tab eventKey="monthly" title="Monthly Spending">
                     <div id={'Monthly'}>
-                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Monthly Spending -</h1>
+                        <h1 style={{ textAlign: 'center' }} className="display-3">Monthly Spending</h1>
+                        <br />
                         <Row className="justify-content-around py-0" style={inlineStyle}>
                             <MonthlySalaryCard netSalary={netSalary}></MonthlySalaryCard>
                             <SavingsCard saving={saving} netSalary={netSalary}></SavingsCard>
@@ -105,14 +106,14 @@ const ResultsPage = () => {
                 {/* Housing Tab */}
                 <Tab eventKey="housing" title="Housing">
                     <div id={'Housing'}>
-                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Housing Section Coming Soon -</h1>
+                        <h1 style={{ textAlign: 'center' }} className="display-3 text-muted">Housing Section Coming Soon</h1>
                     </div>
                 </Tab>
 
                 {/* Other Tab */}
                 <Tab eventKey="car" title="Car">
                     <div id={'Car'}>
-                        <h1 style={{ textAlign: 'center' }} className="display-3 font-weight-bolder text-muted">- Car Section Coming Soon -</h1>
+                        <h1 style={{ textAlign: 'center' }} className="display-3 text-muted">Car Section Coming Soon</h1>
                     </div>
                 </Tab>
             </Tabs>
@@ -120,7 +121,7 @@ const ResultsPage = () => {
 
             <Button variant="danger" onClick={startOver}>Start Over</Button>
 
-        </div>
+        </div >
     );
 }
 

@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const Salary = props => {
     const [salary, setSalary] = useSessionStorage('salary')
     const [netSalary] = React.useState(sessionStorage.getItem('netSalary') || '');
+    const [status] = useSessionStorage('status')
 
     React.useEffect(() => {
         sessionStorage.setItem('netSalary', (salary * .69).toFixed(2))
@@ -25,6 +26,13 @@ const Salary = props => {
     }
 
     let history = useHistory();
+    let statusQuestion = "What is your salary?";
+    let statusText = "Please add your yearly salary.";
+
+    if (status == "Married") {
+        statusQuestion = "What is your combined salary?"
+        statusText = "Please add up your yearly salary between you and your spouse."
+    }
 
 
     return (
@@ -32,10 +40,8 @@ const Salary = props => {
             <Card className="text-center">
                 <Card.Header>Financials</Card.Header>
                 <Card.Body>
-                    <Card.Title>What is your combined salary?</Card.Title>
-                    <Card.Text>
-                        Please add up your yearly salary between you and your spouse.
-                    </Card.Text>
+                    <Card.Title>{statusQuestion}</Card.Title>
+                    <Card.Text>{statusText}</Card.Text>
                     <Form onSubmit={handleSubmit}>
                         <InputGroup className="mb-3">
                             <InputGroup.Prepend>

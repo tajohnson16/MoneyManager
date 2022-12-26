@@ -36,7 +36,7 @@ const HousePercent = props => {
                 <Card.Body>
                     <Card.Title>What percentage of your net income would you like to set aside for spending money?</Card.Title>
                     <Card.Text>
-                        It is recommended that you spend no more than 10% of your net income
+                        It is recommended that you spend no more than 10% of your net income.
                     </Card.Text>
                     <Form onSubmit={handleSubmit}>
                         <InputGroup className="mb-3">
