@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "963f17b43fb3c7356d064175c7b40d01",
+    "revision": "cbc5ad3f5e120d89773174aa3c77a4be",
     "url": "/MoneyManager/index.html"
   },
   {
-    "revision": "aa95452191c4f713a053",
+    "revision": "70ffe03bb2c19d01c4b1",
     "url": "/MoneyManager/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "a3638ee8f2051c085e73",
+    "revision": "fed4ceef0d9b95828dd5",
     "url": "/MoneyManager/static/css/main.00ecfb41.chunk.css"
   },
   {
-    "revision": "aa95452191c4f713a053",
-    "url": "/MoneyManager/static/js/2.72e3961b.chunk.js"
+    "revision": "70ffe03bb2c19d01c4b1",
+    "url": "/MoneyManager/static/js/2.a589ad79.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/MoneyManager/static/js/2.72e3961b.chunk.js.LICENSE.txt"
+    "revision": "e1f5ad522e1b15731a197887d22f1a58",
+    "url": "/MoneyManager/static/js/2.a589ad79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3638ee8f2051c085e73",
-    "url": "/MoneyManager/static/js/main.5b834ba2.chunk.js"
+    "revision": "fed4ceef0d9b95828dd5",
+    "url": "/MoneyManager/static/js/main.28213ef0.chunk.js"
   },
   {
     "revision": "32c51d952505c12b89c3",
