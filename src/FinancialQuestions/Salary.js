@@ -6,13 +6,14 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
 import { Link } from 'react-router-dom';
+import { calculateNetAnnualSalary } from '../utils/financials';
 
 const Salary = () => {
     const [salary, setSalary] = useSessionStorage('salary')
     const [status] = useSessionStorage('status')
 
     React.useEffect(() => {
-        sessionStorage.setItem('netSalary', (salary * .69).toFixed(2))
+        sessionStorage.setItem('netSalary', calculateNetAnnualSalary(salary).toFixed(2))
     }, [salary])
 
     const handleChangeSalary = e => {

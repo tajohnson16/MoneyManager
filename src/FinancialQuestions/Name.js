@@ -7,18 +7,8 @@ import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
 import { Link } from 'react-router-dom';
 
-const Name = props => {
+const Name = () => {
     const [name, setName] = useSessionStorage('name')
-    const [netSalary] = useSessionStorage('netSalary')
-    const [housePercent] = useSessionStorage('housePercent')
-    const [carPercent] = useSessionStorage('carPercent')
-    const [spendPercent] = useSessionStorage('spendPercent')
-
-    const [saving] = React.useState((netSalary * (1 - ((Number(housePercent) + Number(spendPercent) + Number(carPercent)) / 100))) / 12)
-
-    React.useEffect(() => {
-        sessionStorage.setItem('saving', saving.toFixed(2));
-    })
 
     const handleChangeName = e => {
         setName(e.target.value)
