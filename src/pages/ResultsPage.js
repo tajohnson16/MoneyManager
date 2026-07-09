@@ -84,8 +84,8 @@ const ResultsPage = () => {
                 <h2><small className="text-muted">{profession}</small></h2>
                 <Row className="justify-content-around py-0" style={inlineStyle}>
                     <PersonalCard text="Marital Status" value={status}></PersonalCard>
-                    <PersonalCard text="Gross Salary" value={<CurrencyFormat value={salary} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></PersonalCard>
-                    <PersonalCard text="Estimated Net Salary" value={<CurrencyFormat value={netSalary} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></PersonalCard>
+                    <PersonalCard text="Gross Salary" value={<CurrencyFormat value={salary} displayType={'text'} thousandSeparator={true} decimalScale={2} fixedDecimalScale={true} prefix={'$'} />}></PersonalCard>
+                    <PersonalCard text="Estimated Net Salary" value={<CurrencyFormat value={netSalary} displayType={'text'} thousandSeparator={true} decimalScale={2} fixedDecimalScale={true} prefix={'$'} />}></PersonalCard>
                 </Row>
             </Jumbotron>
 
