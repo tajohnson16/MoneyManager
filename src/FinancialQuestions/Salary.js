@@ -7,9 +7,8 @@ import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
 import { Link } from 'react-router-dom';
 
-const Salary = props => {
+const Salary = () => {
     const [salary, setSalary] = useSessionStorage('salary')
-    const [netSalary] = React.useState(sessionStorage.getItem('netSalary') || '');
     const [status] = useSessionStorage('status')
 
     React.useEffect(() => {
@@ -21,7 +20,6 @@ const Salary = props => {
     }
 
     const handleSubmit = event => {
-        alert(salary)
         event.preventDefault()
     }
 
@@ -29,7 +27,7 @@ const Salary = props => {
     let statusQuestion = "What is your salary?";
     let statusText = "Please add your yearly salary.";
 
-    if (status == "Married") {
+    if (status === "Married") {
         statusQuestion = "What is your combined salary?"
         statusText = "Please add up your yearly salary between you and your spouse."
     }

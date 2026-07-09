@@ -9,9 +9,9 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import useSessionStorage from '../components/SessionHook';
 
-const HousePercent = props => {
+const SpendingMoney = () => {
     const [netSalary] = useSessionStorage('netSalary')
-    const [spendPercent, setCarPercent] = React.useState(
+    const [spendPercent, setSpendPercent] = React.useState(
         sessionStorage.getItem('spendPercent') || 10);
 
     React.useEffect(() => {
@@ -19,7 +19,7 @@ const HousePercent = props => {
     }, [spendPercent])
 
     const handleChangeSpendPercent = e => {
-        setCarPercent(e.target.value)
+        setSpendPercent(e.target.value)
     }
 
     const handleSubmit = event => {
@@ -41,7 +41,7 @@ const HousePercent = props => {
                     <Form onSubmit={handleSubmit}>
                         <InputGroup className="mb-3">
                             <Col xs="4">
-                                <FormControl value={spendPercent} size='sm' onChange={handleChangeSpendPercent} aria-label="Housing Percentage" >
+                                <FormControl value={spendPercent} size='sm' onChange={handleChangeSpendPercent} aria-label="Spending percentage" >
                                 </FormControl>
                             </Col>
                             <Col xs="8">
@@ -66,4 +66,4 @@ const HousePercent = props => {
     );
 }
 
-export default HousePercent;
+export default SpendingMoney;

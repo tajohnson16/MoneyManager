@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
-import { useHistory } from 'react-router-dom';
 import PersonalCard from '../components/PersonalCard';
 import MonthlySalaryCard from '../components/MonthlySalaryCard';
 import Row from 'react-bootstrap/Row';
@@ -49,7 +48,7 @@ const ResultsPage = () => {
             indexLabel: "{label}: #percent%",
             percentFormatString: "##.##",
             yValueFormatString: "$####.00",
-            showInLegend: "true",
+            showInLegend: true,
             legendText: "{label}: {y}",
             startAngle: -90,
             dataPoints: [
