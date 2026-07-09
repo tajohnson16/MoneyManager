@@ -7,7 +7,7 @@ const useSessionStorage = localStorageKey => {
 
     React.useEffect(() => {
         sessionStorage.setItem(localStorageKey, value);
-    }, [value]);
+    }, [localStorageKey, value]);
 
     return [value, setValue];
 };

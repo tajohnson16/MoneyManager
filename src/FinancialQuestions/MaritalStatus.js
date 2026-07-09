@@ -4,10 +4,11 @@ import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-const MaritalStatus = props => {
+const MaritalStatus = () => {
     const [status, setStatus] = useSessionStorage('status')
+    const history = useHistory();
 
     const handleChangeStatus = e => {
         setStatus(e.target.value)
@@ -15,6 +16,7 @@ const MaritalStatus = props => {
 
     const handleSubmit = event => {
         event.preventDefault()
+        history.push('/MoneyManager/salary')
     }
 
     return (
@@ -29,12 +31,12 @@ const MaritalStatus = props => {
                     <Form onSubmit={handleSubmit}>
                         <InputGroup className="mb-3">
                             <FormControl as="select" value={status} onChange={handleChangeStatus} aria-label="Married or Single" >
-                                <option value="" disabled selected>-- Select your option --</option>
+                                <option value="" disabled>-- Select your option --</option>
                                 <option>Single</option>
                                 <option>Married</option>
                             </FormControl>
                         </InputGroup>
-                        <Link to='salary'><Button variant="primary" type="submit">Next</Button></Link>
+                        <Button variant="primary" type="submit">Next</Button>
                     </Form>
                 </Card.Body>
             </Card>

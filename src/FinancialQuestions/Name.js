@@ -5,20 +5,10 @@ import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
-import { Link } from 'react-router-dom';
 
-const Name = props => {
+const Name = () => {
     const [name, setName] = useSessionStorage('name')
-    const [netSalary] = useSessionStorage('netSalary')
-    const [housePercent] = useSessionStorage('housePercent')
-    const [carPercent] = useSessionStorage('carPercent')
-    const [spendPercent] = useSessionStorage('spendPercent')
-
-    const [saving] = React.useState((netSalary * (1 - ((Number(housePercent) + Number(spendPercent) + Number(carPercent)) / 100))) / 12)
-
-    React.useEffect(() => {
-        sessionStorage.setItem('saving', saving.toFixed(2));
-    })
+    const history = useHistory();
 
     const handleChangeName = e => {
         setName(e.target.value)
@@ -26,9 +16,8 @@ const Name = props => {
 
     const handleSubmit = event => {
         event.preventDefault()
+        history.push('/MoneyManager/profession')
     }
-
-    let history = useHistory();
 
     return (
         <Row className="justify-content-around py-0" style={{ marginTop: '20px' }} >
@@ -46,7 +35,7 @@ const Name = props => {
                         </InputGroup>
                         <Row className="justify-content-around py-0">
                             <Button variant="primary" onClick={() => history.goBack()}>Back</Button>
-                            <Link to='profession'><Button variant="primary" type="submit">Next</Button></Link>
+                            <Button variant="primary" type="submit">Next</Button>
                         </Row>
                     </Form>
                 </Card.Body>

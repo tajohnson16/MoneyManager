@@ -2,7 +2,6 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
-import { useHistory } from 'react-router-dom';
 import PersonalCard from '../components/PersonalCard';
 import MonthlySalaryCard from '../components/MonthlySalaryCard';
 import Row from 'react-bootstrap/Row';
@@ -11,23 +10,28 @@ import CanvasJSReact from '../canvasjs.react';
 import CurrencyFormat from 'react-currency-format';
 import SavingsCard from '../components/SavingsCard';
 import { Tabs, Tab } from 'react-bootstrap';
+import {
+    calculateMonthlyAmount,
+    calculateMonthlySavings,
+    calculateNetAnnualSalary,
+} from '../utils/financials';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const ResultsPage = () => {
     const [salary] = useSessionStorage('salary')
     const [status] = useSessionStorage('status')
-    const [netSalary] = useSessionStorage('netSalary')
     const [housePercent] = useSessionStorage('housePercent')
     const [carPercent] = useSessionStorage('carPercent')
     const [spendPercent] = useSessionStorage('spendPercent')
     const [name] = useSessionStorage('name')
     const [profession] = useSessionStorage('profession')
-    const [saving] = useSessionStorage('saving')
+    const netSalary = calculateNetAnnualSalary(salary);
+    const saving = calculateMonthlySavings(netSalary, [housePercent, carPercent, spendPercent]);
 
     const dataset = {
-        house: (netSalary * (housePercent / 100)) / 12,
-        car: (netSalary * (carPercent / 100)) / 12,
-        spend: (netSalary * (spendPercent / 100)) / 12,
+        house: calculateMonthlyAmount(netSalary, housePercent),
+        car: calculateMonthlyAmount(netSalary, carPercent),
+        spend: calculateMonthlyAmount(netSalary, spendPercent),
     }
 
     const options = {
@@ -49,14 +53,14 @@ const ResultsPage = () => {
             indexLabel: "{label}: #percent%",
             percentFormatString: "##.##",
             yValueFormatString: "$####.00",
-            showInLegend: "true",
+            showInLegend: true,
             legendText: "{label}: {y}",
             startAngle: -90,
             dataPoints: [
                 { y: dataset.house, label: "House" },
                 { y: dataset.car, label: "Car" },
                 { y: dataset.spend, label: "Spending" },
-                { y: Number(saving), label: "Savings" }
+                { y: saving, label: "Savings" }
             ]
         }]
     }
@@ -80,8 +84,8 @@ const ResultsPage = () => {
                 <h2><small className="text-muted">{profession}</small></h2>
                 <Row className="justify-content-around py-0" style={inlineStyle}>
                     <PersonalCard text="Marital Status" value={status}></PersonalCard>
-                    <PersonalCard text="Gross Salary" value={<CurrencyFormat value={salary} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></PersonalCard>
-                    <PersonalCard text="Estimated Net Salary" value={<CurrencyFormat value={netSalary} displayType={'text'} thousandSeparator={true} prefix={'$'} />}></PersonalCard>
+                    <PersonalCard text="Gross Salary" value={<CurrencyFormat value={salary} displayType={'text'} thousandSeparator={true} decimalScale={2} fixedDecimalScale={true} prefix={'$'} />}></PersonalCard>
+                    <PersonalCard text="Estimated Net Salary" value={<CurrencyFormat value={netSalary} displayType={'text'} thousandSeparator={true} decimalScale={2} fixedDecimalScale={true} prefix={'$'} />}></PersonalCard>
                 </Row>
             </Jumbotron>
 

@@ -2,8 +2,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+beforeEach(() => {
+  window.history.pushState({}, '', '/MoneyManager/');
+  sessionStorage.clear();
+});
+
+test('renders the assessment entry point', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(getByText('Take the assessment now!')).toBeInTheDocument();
 });
