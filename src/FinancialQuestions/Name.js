@@ -5,10 +5,10 @@ import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
-import { Link } from 'react-router-dom';
 
 const Name = () => {
     const [name, setName] = useSessionStorage('name')
+    const history = useHistory();
 
     const handleChangeName = e => {
         setName(e.target.value)
@@ -16,9 +16,8 @@ const Name = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
+        history.push('/MoneyManager/profession')
     }
-
-    let history = useHistory();
 
     return (
         <Row className="justify-content-around py-0" style={{ marginTop: '20px' }} >
@@ -36,7 +35,7 @@ const Name = () => {
                         </InputGroup>
                         <Row className="justify-content-around py-0">
                             <Button variant="primary" onClick={() => history.goBack()}>Back</Button>
-                            <Link to='profession'><Button variant="primary" type="submit">Next</Button></Link>
+                            <Button variant="primary" type="submit">Next</Button>
                         </Row>
                     </Form>
                 </Card.Body>

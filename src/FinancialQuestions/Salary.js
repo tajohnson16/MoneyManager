@@ -5,12 +5,12 @@ import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useSessionStorage from '../components/SessionHook';
-import { Link } from 'react-router-dom';
 import { calculateNetAnnualSalary } from '../utils/financials';
 
 const Salary = () => {
     const [salary, setSalary] = useSessionStorage('salary')
     const [status] = useSessionStorage('status')
+    const history = useHistory();
 
     React.useEffect(() => {
         sessionStorage.setItem('netSalary', calculateNetAnnualSalary(salary).toFixed(2))
@@ -22,9 +22,9 @@ const Salary = () => {
 
     const handleSubmit = event => {
         event.preventDefault()
+        history.push('/MoneyManager/house')
     }
 
-    let history = useHistory();
     let statusQuestion = "What is your salary?";
     let statusText = "Please add your yearly salary.";
 
@@ -53,7 +53,7 @@ const Salary = () => {
                         </InputGroup>
                         <Row className="justify-content-around py-0">
                             <Button variant="primary" onClick={() => history.goBack()}>Back</Button>
-                            <Link to='house'><Button variant="primary" type="submit">Next</Button></Link>
+                            <Button variant="primary" type="submit">Next</Button>
                         </Row>
                     </Form>
                 </Card.Body>
